@@ -4,10 +4,10 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="content-language" content="de-DE" />
-    <meta name="author" content="Matthias Kolonko, $LastChangedBy: kolonko $" />
-    <meta name="description" content="Benutzerdokumentation für KRAS ($LastChangedRevision: 445 $)" />
+    <meta name="author" content="Matthias Kolonko, $LastChangedBy$" />
+    <meta name="description" content="Benutzerdokumentation für KRAS ($LastChangedRevision$)" />
     <meta name="keywords" content="KRAS, Benutzerdoku" />
-    <meta name="date" content="$LastChangedDate: 2012-08-10 19:05:47 +0200 (Fr, 10. Aug 2012) $" />
+    <meta name="date" content="$LastChangedDate$" />
     <title>KRAS-Benutzerdokumentation (erweitert)</title>
     <link rel="stylesheet" type="text/css" href="../../layout/screen.css" />
     <link rel="stylesheet" type="text/css" href="../../layout/print.css" media="print" />
@@ -22,58 +22,381 @@
     </ul>
     <h2>Inhaltsverzeichnis</h2>
     <ol>
-      <li>TODO</li>
+      <li>
+        <a href="#overview">Die Menüs im Überblick</a>
+        <ol>
+          <li>
+            <a href="#overview-ref_dipsosition">KR-Einteilung</a>
+          </li>
+          <li>
+            <a href="#overview-ref_disp_arc">KR-Einteilung Archiv</a>
+          </li>
+          <li>
+            <a href="#overview-event_mgmt">Termine eingeben/ändern</a>
+          </li>
+          <li>
+            <a href="#overview-mark_arc_massmail">KR-Notenarchiv/Mailfunktion</a>
+          </li>
+          <li>
+            <a href="#overview-league">Verwaltung Liga</a>
+          </li>
+          <li>
+            <a href="#overview-usermgmt">Verwaltung KR-Kartei</a>
+          </li>
+          <li>
+            <a href="#overview-reporting">Reporting</a>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <a href="#details">Die Menüs im Detail</a>
+        <ol>
+          <li>
+            <a href="#detail-ref_disposition">KR-Einteilung</a>
+          </li>
+          <li>
+            <a href="#detail-ref_disp_arc">KR-Einteilung Archiv</a>
+          </li>
+          <li>
+            <a href="#detail-event_mgmt">Termine eingeben/ändern</a>
+            <ol>
+              <li>
+                <a href="#detail-event_mgmt-leagues">Besonderheiten bei Ligaterminen</a>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <a href="#detail-mark_arc_massmail">KR-Notenarchiv/Mailfunktion</a>
+          </li>
+          <li>
+            <a href="#detail-league">Verwaltung Liga</a>
+          </li>
+          <li>
+            <a href="#detail-usermgmt">Verwaltung KR-Kartei</a>
+          </li>
+          <li>
+            <a href="#detail-reporting">Reporting</a>
+          </li>
+        </ol>
+      </li>
     </ol>
-    <h2>Die Menüs im Überblick</h2>
+    <h2>
+      <a name="overview" />
+      Die Menüs im Überblick
+    </h2>
     <p>Die folgenden Menüpunkte sind je nach Konfiguration nur für KR-Obleute und die KR-Kommission sichtbar!</p>
-    <h3>KR-Einteilung</h3>
-    <p>Im Menü „KR-Einteilung“ lassen sich die Einteilungen für alle Veranstaltungen vornehmen, für die man zuständig
+    <h3>
+      <a name="overview-ref_dipsosition" />
+      KR-Einteilung
+    </h3>
+    <p>
+      Im Menü
+      <code>KR-Einteilung</code>
+      lassen sich die Einteilungen für alle Veranstaltungen vornehmen, für die man zuständig
       ist.
     </p>
     <p>
-      Je nach Konfiguration können die verschiedenen Benutzergruppen (z.B. die KR-Kommission) darüberhinaus auch 
-      die Einteilung anderer Bezirke einsehen, um z.B. Überschneidungen ausfindig zu machen, 
+      Je nach Konfiguration können die verschiedenen Benutzergruppen (z.B. die KR-Kommission) darüberhinaus auch
+      die
+      Einteilung anderer Bezirke einsehen, um z.B. Überschneidungen ausfindig zu machen,
       oder diese auch direkt ändern.
     </p>
-    <h3>KR-Einteilung Archiv</h3>
+    <h3>
+      <a name="overview-ref_disp_arc" />
+      KR-Einteilung Archiv
+    </h3>
     <p>Unter diesem Menüpunkt findet sich ein Archiv aller Einteilungen aus den Vorjahren, für die der Nutzer zuständig
       ist.
     </p>
     <p>Wie weit dieses Archiv in die Vergangenheit reicht, kann individuell bestimmt werden.</p>
-    <h3>Termine eingeben/ändern</h3>
+    <h3>
+      <a name="overview-event_mgmt" />
+      Termine eingeben/ändern
+    </h3>
     <p>In diesem Menü lassen sich die Termine selbst pflegen. Es können neue Termine angelegt, bereits bestehende
       verändert oder gelöscht werden.
     </p>
-    <h3>KR-Notenarchiv/Mailfunktion</h3>
+    <h3>
+      <a name="overview-mark_arc_massmail"></a>
+      KR-Notenarchiv/Mailfunktion
+    </h3>
     <p>Hier können die Noten aller Kampfrichter eingesehen werden, für die der angemeldete Nutzer zuständig ist.
       Zugleich kann über die hier erscheinende Auswahlliste die Massenmailfunktion aufgerufen werden, über die ganze
       Benutzergruppen benachrichtigt werden können.
     </p>
-    <h3>Verwaltung Liga</h3>
+    <h3>
+      <a name="overview-league" />
+      Verwaltung Liga
+    </h3>
     <p>Dieser Menüpunkt dient der Pflege der Vereine, die in den Ligen der jeweiligen Ebene vertreten sind. Die Vereine
       werden für die Einteilung der Kampfrichter auf die verschiedenen Ligaveranstaltungen an einem Ligatag benötigt.
     </p>
-    <h3>Verwaltung KR-Kartei</h3>
+    <h3>
+      <a name="overview-usermgmt" />
+      Verwaltung KR-Kartei
+    </h3>
     <p>In diesem Menü lassen sich sämtliche Angaben und Rechte jedes Benutzers dieser Datenbank einstellen.</p>
+    <h3>
+      <a name="overview-reporting" />
+      Reporting
+    </h3>
+    <p>TODO</p>
 
 
-    <h2>Die Menüs im Detail</h2>
+    <h2>
+      <a name="details" />
+      Die Menüs im Detail
+    </h2>
+    <p>Im Folgenden werden die Menüs detailliert erklärt.</p>
+    <h3>
+      <a name="detail-ref_disposition" />
+      KR-Einteilung
+    </h3>
+    <p>
+      Das Menü zeigt die Liste aller Veranstaltungen, die für den jeweiligen Einteiler relevant sind. Die Pflege der
+      Veranstaltungstermine erfolgt über das Menü
+      <a href="#detail-event_mgmt">Termine eingeben/ändern</a>
+      .
+    </p>
+    <p>
+      Die Mitglieder der KR-Kommission können hierbei neben den Einteilungen aus Gebiet und Land, die sie zu bearbeiten
+      haben, auch sämtliche Einteilungen der nachgeordneten Bezirke einsehen, aber nicht verändern. Die KR-Obleute sehen
+      jeweils nur ihren eigenen Bezirk! (Die Einstellungen können bei Bedarf über den
+      <a href="#TODO">Administratorenzugang</a>
+      auch
+      geändert werden). Termine, für die bereits eine Einteilung verschickt wurde, werden in der
+      Standardkonfiguration
+      grün dargestellt.
+    </p>
+    <p>Mit Klick auf einen der Termine öffnet sich das Einteilungsformular dafür.</p>
+    <p>
+      Das Einteilungsformular zeigt im Titel die Veranstaltung und darunter eine Liste der Kampfrichter mit Orts- und
+      Lizenzangabe, die sich für diesen Termin angemeldet haben.
+      <br />
+      Die Namen der einzelnen Kampfrichter, die sich gemeldet haben, können angeklickt werden, wodurch sich ein neues
+      Fenster mit den Detaildaten zu dem gewählten Kampfrichter öffnet.
+    </p>
+    <p class="important">
+      <em>Wichtig</em>
+      :
+      <br />
+      Kampfrichter, die in der Liste rot dargestellt werden, sind bereits für eine andere Veranstaltung eingeplant
+      worden. Hält man den Mauszeiger über den Namen des Kampfrichters, so wird auch angezeigt, wo der Kampfrichter
+      bereits eingeteilt wurde.
+      Mitglieder der Kampfrichterkommission können sich diesen Termin ansehen und ggf.
+      Rücksprache mit dem zuständigen
+      Kampfrichterobmann halten.
+    </p>
+    <p>Die weiteren Felder haben folgende Funktion:</p>
+    <ul>
+      <li>
+        <h4>Auswahl</h4>
+        <p>Alle Kampfrichter, bei denen diese Checkbox aktiviert ist, sind damit für diese Veranstaltung nominiert. Die
+          nachfolgenden Felder können nur gepflegt werden, wenn dieser Haken gesetzt wurde!
+        </p>
+        <p class="attention">
+          <em>Achtung</em>
+          :
+          <br />
+          Ist JavaScript nicht aktiviert, muss zuerst die Auswahl hier getroffen und mit dem
+          <code>Speichern</code>
+          -Button
+          gesichert werden, dann können auch die restlichen Felder gepflegt werden!
+          <br />
+          Bei aktiviertem JavaScript werden die übrigen Felder der Zeile mit Klick auf das Auswahl-Häkchen aktiviert!
+        </p>
+      </li>
+      <li>
+        <h4>HKR</h4>
+        <p>
+          Der Kampfrichter, der hier aktiviert ist, ist als Hauptkampfrichter vorgesehen. Es kann immer nur ein
+          Kampfrichter als Hauptkampfrichter eingeteilt werden.
+          <br />
+          Ausnahme bilden die Ligaveranstaltungen, bei denen auch mehrere wählbar sind.
+        </p>
+        <p>Die Auswahl eines HKRs ist nicht verpflichtend.</p>
+        <p class="info">
+          <em>Tipp</em>
+          :
+          Sollte für die aktuelle Veranstaltung kein HKR eingeteilt werden und es wurde ver-sehentlich ein Nominierter
+          als HKR
+          ausgewählt, lässt sich das rückgängig machen, indem man den Haken bei abgesagt deaktiviert und wieder
+          aktiviert.
+          <br />
+          Ist JavaScript nicht eingeschaltet, muss zwischen dem Deaktivieren und dem Aktivieren zuerst gespeichert
+          werden!
+        </p>
+      </li>
+      <li>
+        <h4>Bew</h4>
+        <p>Die Kampfrichter, bei denen Bewerter aktiviert ist, sind als Bewerter eingeteilt.</p>
+        <p>
+          Die Checkbox in der Spalte Bewerter erscheint nur, wenn der jeweilige Kampfrichter auch tatsächlich berechtigt
+          ist, für diese Veranstaltung Bewertungen durchzuführen!
+          <br />
+          Die Berechtigung zum Bewerten muss vom zuständigen Mitglied der KR-Kommission gesetzt werden!
+        </p>
+      </li>
+      <li>
+        <h4>W</h4>
+        <p>Die Kampfrichter, bei denen dieses Feld angeklickt wurde, sind für das Wiegen der Kämpfer vorgesehen.</p>
+      </li>
+      <li>
+        <h4>FG</h4>
+        <p>In dieses Feld können Fahrgemeinschaften eingetragen werden. Hierbei wird den Kampf-richtern, die eine
+          Fahrgemeinschaft bilden sollen, jeweils die gleiche Nummer zugewiesen und so gruppiert.
+        </p>
+        <p>
+          Es ist zu beachten, dass hier nur ganze Zahlen vorgesehen sind! Die
+          <q>0</q>
+          darf nicht benutzt werden. Es könnte sonst evtl. zu Missverständnissen kommen, da auch das System z.T. leere
+          Felder mit einer
+          <q>0</q>
+          füllt!
+        </p>
+      </li>
+      <li>
+        <h4>Note</h4>
+        <p>Ist bei der Durchführung der Veranstaltung der Kampfrichter bewertet worden, ist hier die entsprechende Note,
+          die vom Bewerter mitgeteilt wurde, einzutragen! Die Einteilung muss nach dem Termin u.U. über das Menü
+          KR-Einteilung Archiv erreicht werden.
+        </p>
+      </li>
+      <li>
+        <h4>abgesagt</h4>
+        <p>Sollte ein Kampfrichter seinen Einsatz abgesagt haben, kann das hier angegeben werden. In diesem Fall wird
+          auch ein entsprechender Eintrag in der Kampfrichterkartei vermerkt und der Zähler der abgesagten Termine um
+          eins erhöht.
+        </p>
+        <p class="attention">
+          <em>Achtung</em>
+          :
+          <br />
+          Wird diese Checkbox aktiviert, wird bei aktiviertem JavaScript zugleich der Radiobutton bzw. die Checkbox für
+          HKR in dieser Zeile deaktiviert. Ist JavaScript nicht aktiv muss zuerst gespeichert werden, um dies zu
+          erreichen.
+        </p>
+      </li>
+      <li>
+        <h4>Liga-Verein</h4>
+        <p>
+          Handelt es sich bei dem Termin um einen Liga-Kampftag, so erscheint zwischen
+          <code>Auswahl</code>
+          und
+          <code>HKR</code>
+          diese
+          zusätzliche Spalte. In dieser kann nun jeder ausgewählte Kampfrichter einem Verein zugeteilt werden, zu
+          dessen
+          Ligabegegnung er fahren soll. Die hier möglichen Vereine sind jeweils nur solche, die einen Heimkampf
+          haben.
+        </p>
+      </li>
+      <li>
+        <h4>
+          Button
+          <code>Speichern</code>
+        </h4>
+        <p>
+          Mit Klick auf den Button werden die eingegebenen bzw. veränderten Daten festgeschrie-ben. Wechselt man ohne
+          vorheriges Speichern in ein anderes Menü, werden sämtliche Änderungen verworfen!
+          <br />
+          Beim Speichern wird die Einteilung zuerst nach der Fahrgemeinschaft und dann nach dem Namen sortiert. Datum
+          und Benutzer der Änderung werden auch gespeichert.
+        </p>
+      </li>
+      <li>
+        <h4>
+          Button
+          <code>Einladung versenden</code>
+        </h4>
+        <p>Bevor eine Einladung per eMail verschickt wird, müssen die gemachten Änderungen vorher gespeichert werden, da
+          diese sonst verworfen werden und auch im Text der eMail die alten Daten stehen werden!
+        </p>
+        <p class="info">
+          <em>Hinweis</em>
+          : Ist
+          <strong>JavaScript</strong>
+          aktiviert, wird beim Betätigen des Buttons
+          <code>Einladung versenden</code>
+          ein Auswahlfeld gezeigt, dass nachfragt, ob gespeichert werden soll. Wird in diesem Feld auf
+          <code>OK</code>
+          geklickt, so wird die Einteilung gespeichert und es muss erneut der Button
+          <code>Einladung versenden</code>
+          betätigt
+          werden. Durch Klick auf
+          <code>Abbrechen</code>
+          im Auswahlfeld, wird die eMail-Funktion gestartet.
+          <br />
+          Ist
+          <strong>JavaScript</strong>
+          nicht aktiv, wird die eMail-Funktion direkt gestartet.
+        </p>
+        <p>Durch Klick auf den Button wird ein eMail-Formular geöffnet, in dem als Empfänger alle nominierten
+          Kampfrichter eingetragen sind und sowohl Betreff als auch Text bereits mit den Einteilungsdaten vorbelegt
+          sind.
+        </p>
+        <p>Die Daten können hier vor dem Senden noch verändert, weitere Empfänger hinzugefügt (die eMail-Adressen der
+          Empfänger müssen mit einem einfachen Komma getrennt werden!) und eine Empfangsbestätigung durch Aktivierung
+          der entsprechenden Checkbox angefordert werden.
+        </p>
+        <p>
+          Durch Klick auf den Button
+          <code>Absenden</code>
+          wird die eMail verschickt. Als Absender wird hierbei der Name und die eMail-Adresse des absendenden Nutzers
+          herangezogen, wodurch auch die Empfangsbestätigungen – sollte diese aktiviert worden sein – an diesen gesandt
+          werden.
+          <br />
+          Der Absender erhält zur Kontrolle die versandte eMail ebenfalls zugeschickt.
+        </p>
+      </li>
+      <li>
+        <h4>
+          Button
+          <code>Hinzufügen</code>
+        </h4>
+        <p>In der davorstehenden Liste, die nach Buchstaben gruppiert ist, kann ein Kampfrichter ausgewählt werden. Mit
+          Klick auf den Button wird der gewählte Kampfrichter in die Liste der nominierten Kampfrichter aufgenommen und
+          gleich als ausgewählt angekreuzt.
+        </p>
+        <p>Beim Hinzufügen wird das Datum der Aktion und der Benutzer, der hinzugefügt hat in der Datenbank
+          abgespeichert.
+        </p>
+      </li>
+    </ul>
+    <h3>
+      <a name="detail-ref_disp_arc" />
+      KR-Einteilung Archiv
+    </h3>
     <p></p>
-    <h3>KR-Einteilung</h3>
+    <h3>
+      <a name="detail-event_mgmt"></a>
+      Termine eingeben/ändern
+    </h3>
     <p></p>
-    <h3>Termine eingeben/ändern</h3>
+    <h4>
+      <a name="detail-event_mgmt-leagues" />
+      Besonderheiten bei Ligaterminen
+    </h4>
     <p></p>
-    <h4>Besonderheiten bei Ligaterminen</h4>
+    <h3>
+      <a name="detail-mark_arc_massmail" />
+      KR-Notenarchiv/Mailfunktion
+    </h3>
     <p></p>
-    <h3>KR-Einteilung Archiv</h3>
+    <h3>
+      <a name="detail-league" />
+      Verwaltung Liga
+    </h3>
     <p></p>
-    <h3>KR-Notenarchiv/Mailfunktion</h3>
+    <h3>
+      <a name="detail-usermgmt" />
+      Verwaltung KR-Kartei
+    </h3>
     <p></p>
-    <h3>Verwaltung Liga</h3>
-    <p></p>
-    <h3>Verwaltung KR-Kartei</h3>
-    <p></p>
-    <h3>Reporting</h3>
+    <h3>
+      <a name="detail-reporting" />
+      Reporting
+    </h3>
     <p></p>
   </body>
 </html>
