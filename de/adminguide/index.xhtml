@@ -16,267 +16,949 @@
     <h1>KRAS-Administrationsdokumentation</h1>
     <h2>weitere Dokus</h2>
     <ul>
-      <li><a href="../userguide/index.xhtml">Benutzerdoku (einfach)</a>      </li>
-      <li><a href="../userguide_extended/index.xhtml">Benutzerdoku (erweitert)</a></li>
+      <li>
+        <a href="../userguide/index.xhtml">Benutzerdoku (einfach)</a>
+      </li>
+      <li>
+        <a href="../userguide_extended/index.xhtml">Benutzerdoku (erweitert)</a>
+      </li>
     </ul>
     <h2>Inhaltsverzeichnis</h2>
     <ol>
       <li>
         <a href="#installation">Installation</a>
         <ol>
-          <li><a href="#system_requirements">Systemvoraussetzungen</a></li>
-          <li><a href="#installation-procedure">Ablauf</a></li>
-          <li><a href="#config.php">Die Datei <code>config.php</code></a></li>
-          <li><a href="#css-layout">Layout mit CSS-Dateien</a></li>
-          <li><a href="#pictures">Grafiken und Bilder</a></li>
+          <li>
+            <a href="#system_requirements">Systemvoraussetzungen</a>
+          </li>
+          <li>
+            <a href="#installation-procedure">Ablauf</a>
+          </li>
+          <li>
+            <a href="#config.php">
+              Die Datei
+              <code>config.php</code>
+            </a>
+          </li>
+          <li>
+            <a href="#css-layout">Layout mit CSS-Dateien</a>
+          </li>
+          <li>
+            <a href="#pictures">Grafiken und Bilder</a>
+          </li>
         </ol>
       </li>
       <li>
         <a href="#admin-account">Administrationszugang</a>
         <ol>
-          <li><a href="#overview">Übersicht</a></li>
-          <li><a href="#events">Termine</a></li>
-          <li><a href="#districts">Bezirke</a></li>
+          <li>
+            <a href="#overview">Übersicht</a>
+          </li>
+          <li>
+            <a href="#events">Termine</a>
+          </li>
+          <li>
+            <a href="#districts">Bezirke</a>
+          </li>
           <li>
             <a href="#usertypes">Userarten</a>
             <ol>
-              <li><a href="#usertypes-edit">Userart bearbeiten</a></li>
-              <li><a href="#usertypes-create">Userart anlegen</a></li>
+              <li>
+                <a href="#usertypes-edit">Userart bearbeiten</a>
+              </li>
+              <li>
+                <a href="#usertypes-create">Userart anlegen</a>
+              </li>
             </ol>
           </li>
-          <li><a href="#licenses">Lizenzen</a></li>
-          <li><a href="#graduations">Gürtel</a></li>
-          <li><a href="#change_password">Passwort ändern</a></li>
-          <li><a href="#import_user">User importieren</a></li>
-          <li><a href="#import_clubs">Vereine importieren</a></li>
-          <li><a href="#user_mgmt">KR-Kartei bearbeiten</a></li>
-          <li><a href="#logout">Logout</a></li>
+          <li>
+            <a href="#licenses">Lizenzen</a>
+          </li>
+          <li>
+            <a href="#graduations">Gürtel</a>
+          </li>
+          <li>
+            <a href="#change_password">Passwort ändern</a>
+          </li>
+          <li>
+            <a href="#import_user">User importieren</a>
+          </li>
+          <li>
+            <a href="#import_clubs">Vereine importieren</a>
+          </li>
+          <li>
+            <a href="#user_mgmt">KR-Kartei bearbeiten</a>
+          </li>
+          <li>
+            <a href="#logout">Logout</a>
+          </li>
         </ol>
       </li>
-      <li><a href="#data_interface">Automatische Datenschnittstelle</a></li>
+      <li>
+        <a href="#data_interface">Automatische Datenschnittstelle</a>
+      </li>
     </ol>
-    <h2><a name="installation" />Installation</h2>
-    <p>TODO</p>
-    <h3><a name="system_requirements" />Systemvoraussetzungen</h3>
-    <p>Für das Kampfrichteranmeldesystem wird ein Webspace benötigt. Der Webspace muss neben den Fähigkeiten, Webseiten bereitzustellen, folgende Leistungsmerkmale haben:</p>
+    <h2>
+      <a name="installation" />
+      Installation
+    </h2>
+    <h3>
+      <a name="system_requirements" />
+      Systemvoraussetzungen
+    </h3>
+    <p>Für das Kampfrichteranmeldesystem wird ein Webspace benötigt. Der Webspace muss neben den Fähigkeiten, Webseiten
+      bereitzustellen, folgende Leistungsmerkmale haben:
+    </p>
     <ul>
       <li>
         <p>Bereitstellung der Skriptsprache PHP.</p>
-        <p>Diese wird benötigt, da das gesamte System mit dieser Sprache erstellt wurde und sollte in der Version 5.2 oder höher vorliegen.</p>
-        <p class="attention"><em>Achtung</em>: Es kommt immer wieder vor, dass Anbieter von Webspace nicht alle Funktionen dieser Sprache aus unterschiedlichen Gründen aktiviert haben bzw. zur Verfügung stellen. Es wird empfohlen, das System vorher gründlich auf dem Ziel-Webspace zu testen, ob auch alle Funktionen, die von KRAS benutzt werden, zur Verfügung stehen, bevor es dort produktiv eingesetzt bzw. ein längerfristiger Vertrag mit dem Internetprovider eingegangen wird!</p>
+        <p>Diese wird benötigt, da das gesamte System mit dieser Sprache erstellt wurde und sollte in der Version 5.2
+          oder höher vorliegen.
+        </p>
+        <p class="attention">
+          <em>Achtung</em>
+          : Es kommt immer wieder vor, dass Anbieter von Webspace nicht alle Funktionen dieser Sprache aus
+          unterschiedlichen Gründen aktiviert haben bzw. zur Verfügung stellen. Es wird empfohlen, das System vorher
+          gründlich auf dem Ziel-Webspace zu testen, ob auch alle Funktionen, die von KRAS benutzt werden, zur Verfügung
+          stehen, bevor es dort produktiv eingesetzt bzw. ein längerfristiger Vertrag mit dem Internetprovider
+          eingegangen wird!
+        </p>
+        <p>Folgende Laufzeitparameter in PHP müssen wie folgt gesetzt sein:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Parametername</th>
+              <th>erforderlicher Wert</th>
+              <th>Bemerkung</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <code>short_open_tag</code>
+              </th>
+              <td>
+                <code>On</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <code>register_globals</code>
+              </th>
+              <td>
+                <code>Off</code>
+              </td>
+              <td>Dies ist eine sicherheitskritische Einstellung!!!</td>
+            </tr>
+          </tbody>
+        </table>
       </li>
       <li>
         <p>Anbindung an eine MySQL- oder PostgreSQL-Datenbank.</p>
-        <p>Die meisten Webspace-Anbieter gewähren einen Zugang zu solch einem Datenbank-system zusammen mit der Bereitstellung einer Datenbank. Es sollte gegebenenfalls vorher nachgefragt werden, ob die Anbindung gewährleistet wird und in welcher Version der MySQL-Server vorliegt.</p>
+        <p>Die meisten Webspace-Anbieter gewähren einen Zugang zu solch einem Datenbank-system zusammen mit der
+          Bereitstellung einer Datenbank. Es sollte gegebenenfalls vorher nachgefragt werden, ob die Anbindung
+          gewährleistet wird und in welcher Version der MySQL-Server vorliegt.
+        </p>
         <p>Für das KRAS wird MySQL in Version 4.1 bzw. PostgreSQL 8.2 oder höher benötigt!</p>
       </li>
     </ul>
-    <h3><a name="installation-procedure" />Ablauf</h3>
+    <h3>
+      <a name="installation-procedure" />
+      Ablauf
+    </h3>
     <p>Um KRAS benutzen zu können, müssen folgende kurze Schritte durchgeführt werden:</p>
     <ol>
       <li>
-        <p>Bearbeiten der Datei <code>config.php</code>:</p>
-        <p>Hier müssen die Variablen, wie unter <a href="#config.php">Die Datei <code>config.php</code></a> beschrieben, korrekt belegt werden.</p>
+        <p>Abrufen der aktuellen Version aus Subversion:</p>
+        <p>
+          KRAS ist in einem sogenanntes Code-Repository namens
+          <q>Subversion</q>
+          abgelegt (
+          <a href="">TODO</a>
+          ).
+        </p>
+        <p>
+          Dieses Repository findet sich unter der URL
+          <a href="https://secure.judoverband-bayern.de/svn/code/KRAS/">https://secure.judoverband-bayern.de/svn/code/KRAS/</a>
+          . Die Zugangsdaten können beim BJV erfragt werden.
+        </p>
+        <p>
+          Das Repository teilt sich auf in den laufenden Entwicklungsbereich (
+          <code>trunk</code>
+          ), Entwicklungs- und Releasezweige (
+          <code>branches</code>
+          ) und Releasestände (
+          <code>tags</code>
+          )
+          <br />
+          Es wird empfohlen einen Releasezweig oder -tag beim Abrufen zu benutzen. Releasezweige liegen im Ordner
+          <code>branches</code>
+          und sind erkennbar an einer zweiteiligen Versionsnummer (Bsp.:
+          <samp>4.1</samp>
+          ). Releasestände liegen im Ordner
+          <code>tags</code>
+          und sind erkennbar an einer dreiteiligen Versionsnummer (Bsp.:
+          <samp>4.1.3</samp>
+          ).
+          <br />
+          Bei Releasezweige bieten den Vorteil, dass Fehlerkorrekturen dort automatisch eingespielt werden und durch ein
+          <code>update</code>
+          -Kommando des Subversion-Clients abgerufen werden können.
+          Releasestände sind feste Stände, die nicht mehr
+          verändert werden. Fehlerkorrekturen resultieren in einem neuen Stand und müssen manuell abgerufen werden -
+          entweder durch ein erneutes Abrufen oder durch das Kommando
+          <code>switch</code>
+          des Subversion-Clients.
+        </p>
+        <p>
+          Die jeweils aktuelle Dokumentation befindet sich ebenfalls in einem solchen Repository. Sie wird beim Abrufen
+          von KRAS automatisch mit heruntergeladen, kann aber auch direkt aufgerufen werden:
+          <a href="https://secure.judoverband-bayern.de/svn/docs/documentation/KRAS/">https://secure.judoverband-bayern.de/svn/docs/documentation/KRAS/</a>
+        </p>
+        <p>
+          Um den Code von dort abzurufen ist ein entsprechender Client notwendig. Für Windows kann hier der kostenlose
+          Client TortoiseSVN empfohlen werden (
+          <a href="http://tortoisesvn.net/">http://tortoisesvn.net/</a>
+          ).
+        </p>
+      </li>
+      <li>
+        <p>
+          Bearbeiten der Datei
+          <code>config.php</code>
+          :
+        </p>
+        <p>
+          Nach dem Abruf des Codes befindet sich im Hauptverzeichnis der Anwendung (Ordner
+          <code>application</code>
+          ) die Datei
+          <code>config.sample.php</code>
+          . Diese muss zuerst kopiert werden und an gleicher Stelle als
+          <code>config.php</code>
+          wieder eingefügt werden.
+        </p>
+        <p>
+          Hier müssen die Variablen, wie unter
+          <a href="#config.php">
+            Die Datei
+            <code>config.php</code>
+          </a>
+          beschrieben, korrekt belegt werden.
+        </p>
       </li>
       <li>
         <p>Das Softwarepaket in dem Ordner ablegen, an dem es laufen soll</p>
-        <p class="attention"><em>Achtung</em>: Unter Umständen muss die Datei <code>config.php</code> bei den Berechtigungen auf dem Server auf 755 und die Datei <code>session.php</code> im Unterverzeichnis admin auf 777 gestellt sein!</p>
+        <p class="attention">
+          <em>Achtung</em>
+          : Unter bestimmten Umständen muss die Datei
+          <code>config.php</code>
+          bei den Berechtigungen auf dem Server auf
+          <kbd>755</kbd>
+          und die Datei
+          <code>session.php</code>
+          im Unterverzeichnis admin auf
+          <kbd>777</kbd>
+          gestellt sein!
+        </p>
+        <p>
+          Sofern Einfluss auf die Zuordnung von URL und Ordner genommen werden kann, sollte die URL, mit der KRAS
+          aufgerufen werden soll, auf den Ordner
+          <code>public</code>
+          zeigen und nicht auf den Hauptordner (
+          <code>application</code>
+          ).
+        </p>
       </li>
       <li>Öffnen der URL, über die das System nun erreichbar sein soll</li>
       <li>
         <p>Anmelden als Administrator</p>
-        <p>Username <kbd>admin</kbd> - das Passwort ist zum Anfang auf <kbd>pw</kbd> gesetzt! Das Passwort ist verschlüsselt!<br />Um <kbd>pw</kbd> als Passwort wiederherzustellen muss bei der Variablen <var>$adminpw</var> (Datei <code>application/controller/backend/session.php</code>) der Code zwischen den Anführungszeichen durch folgendes ersetzt werden: $2a$08$p2V2u2cGO7bFZgDPo1.vW.nEjXj4YmNLNKvOAURIahINUeTn1ZyJ2</p>
-        <p class="attention"><em>Achtung</em>: Das Passwort sollte aus Sicherheitsgründen unverzüglich geändert werden!</p>
+        <p>
+          Username
+          <kbd>admin</kbd>
+          - das Passwort ist zum Anfang auf
+          <kbd>pw</kbd>
+          gesetzt. Das Passwort ist verschlüsselt!
+          <br />
+          Um
+          <kbd>pw</kbd>
+          als Passwort wiederherzustellen muss bei der Variablen
+          <var>$adminpw</var>
+          (Datei
+          <code>application/controller/backend/session.php</code>
+          ) der Code zwischen den Anführungszeichen durch folgendes ersetzt werden:
+          <code>$2a$08$p2V2u2cGO7bFZgDPo1.vW.nEjXj4YmNLNKvOAURIahINUeTn1ZyJ2</code>
+        </p>
+        <p class="attention">
+          <em>Achtung</em>
+          : Das Passwort sollte aus Sicherheitsgründen unverzüglich geändert werden!
+        </p>
       </li>
-      <li>Nach der Anmeldung erscheint im rechten Teil weiter oben <code>Installation starten</code>. Mit diesem Menü müssen die Tabellen angelegt werden, BEVOR etwas anderes gemacht werden kann.<br />Die Installation wird dort erklärt.</li>
       <li>
-        <p>Ordner <code>installation</code> löschen.</p>
-        <p>Der Ordner <code>installation</code> sollte nach erfolgreicher Installation gelöscht werden.</p>
+        Nach der Anmeldung erscheint im rechten Teil weiter oben
+        <code>Installation starten</code>
+        . Mit diesem Menü müssen die Tabellen angelegt werden, BEVOR etwas anderes gemacht werden kann.
+        <br />
+        Die Installation wird dort erklärt.
+      </li>
+      <li>
+        <p>
+          Ordner
+          <code>installation</code>
+          löschen.
+        </p>
+        <p>
+          Der Ordner
+          <code>installation</code>
+          sollte nach erfolgreicher Installation gelöscht werden.
+        </p>
       </li>
       <li>
         <p>Grunddaten anlegen.</p>
-        <p>Bevor Benutzer und Termine angelegt werden könne, müssen VORHER die Gürtel, Lizenzen und Bezirke angelegt werden!!!</p>
+        <p>Bevor Benutzer und Termine angelegt werden könne, müssen VORHER die Gürtel, Lizenzen und Bezirke angelegt
+          werden!!!
+        </p>
       </li>
     </ol>
-    <h3><a name="config.php" />Die Datei <code>config.php</code></h3>
-    <p>Neben dem Administratorenzugang muss vor allem bei der Installation, aber evtl. auch bei späteren Änderungen, eine Datei gepflegt werden, die wichtige Variablen für die Funktion des gesamten Systems enthält.</p>
-    <p>Die Datei trägt den Namen <code>config.php</code> und liegt im Stammverzeichnis des Systems (also in dem Ordner, in dem das System abgelegt wurde). Die Datei kann z.B. über ein Standard-FTP-Programm heruntergeladen, bearbeitet und wieder hochgeladen werden.</p>
-    <p>Die Variablen sind auch innerhalb der Datei <code>config.php</code> mit Kommentaren versehen. Sämtliche Variablen sind mit einem <kbd>$</kbd> vor dem ersten Buchstaben gekennzeichnet.</p>
-    <p class="attention"><em>Achtung</em>: Die Datei <code>config.php</code> muss bei Dateirechten des Dateisystems so eingestellt sein, dass ein Zugriff immer gewährleistet ist.</p>
-    <p>Alle Einstellungen müssen hinter der Variablen und einem <kbd>=</kbd>-Zeichen stehen. Textwerte müssen in doppelte Hochkommas (<kbd>"</kbd>) gesetzt werden, Zahlenwerte können direkt angegeben werden (Dezimalzahlen sind dabei <strong>immer</strong> mit einem Punkt zu trennen!!!)<br />Die Variablen haben folgende Funktion:</p>
+    <h3>
+      <a name="config.php" />
+      Die Datei
+      <code>config.php</code>
+    </h3>
+    <p>Neben dem Administratorenzugang muss vor allem bei der Installation, aber evtl. auch bei späteren Änderungen,
+      eine Datei gepflegt werden, die wichtige Variablen für die Funktion des gesamten Systems enthält.
+    </p>
+    <p>
+      Die Datei trägt den Namen
+      <code>config.php</code>
+      und liegt im Stammverzeichnis des Systems (also in dem Ordner, in dem das System abgelegt wurde). Die Datei kann
+      z.B. über ein Standard-FTP-Programm heruntergeladen, bearbeitet und wieder hochgeladen werden.
+    </p>
+    <p>
+      Die Variablen sind auch innerhalb der Datei
+      <code>config.php</code>
+      mit Kommentaren versehen. Sämtliche Variablen sind mit einem
+      <kbd>$</kbd>
+      vor dem ersten Buchstaben gekennzeichnet.
+    </p>
+    <p>
+      Alle Einstellungen müssen hinter der Variablen und einem
+      <kbd>=</kbd>
+      -Zeichen stehen. Textwerte müssen in doppelte Hochkommas (
+      <kbd>"</kbd>
+      ) gesetzt werden, Zahlenwerte können direkt angegeben werden (Dezimalzahlen sind dabei
+      <strong>immer</strong>
+      mit einem Punkt zu trennen!!!)
+      <br />
+      Die Variablen haben folgende Funktion:
+    </p>
     <h4>Allgemeine Einstellungen</h4>
     <ul>
       <li>
-        <h5><var>$kontakt</var></h5>
-        <p>Die Variable <var>$kontakt</var> beinhaltet die eMail-Adresse, die für den Benutzer beim Klick auf den Link Kontakt auf der Loginseite in ein neues eMail-Fenster eingesetzt wird und wird ebenso für den Versand der eMails benutzt.</p>
-        <p class="attention"><em>Achtung</em>: Bei vielen Anbietern muss diese eMail-Adresse auch wirklich existieren, da es sonst beim Mailversand zu Fehlern kommt!</p>
+        <h5>
+          <var>$kontakt</var>
+        </h5>
+        <p>
+          Die Variable
+          <var>$kontakt</var>
+          beinhaltet die eMail-Adresse, die für den Benutzer beim Klick auf den Link Kontakt auf der Loginseite in ein
+          neues eMail-Fenster eingesetzt wird und wird ebenso für den Versand der eMails benutzt.
+        </p>
+        <p class="attention">
+          <em>Achtung</em>
+          : Bei vielen Anbietern muss diese eMail-Adresse auch wirklich existieren, da es sonst beim Mailversand zu
+          Fehlern kommt!
+        </p>
       </li>
       <li>
-        <h5><var>$gueltig</var></h5>
-        <p>Die User werden mit sog. Sessions überwacht. Eine Session kontrolliert, ob der User aktiv im System tätig ist. Ist dies eine vorgegebene Zeit lang nicht mehr der Fall, wird der User automatisch abgemeldet. Dies soll vor allem verhindern, dass der User nicht mehr abgemeldet wird, falls er das selbst vergisst.</p>
-        <p>Wie lange die besagte vorgegebene Zeitspanne ist, kann in dieser Variable hinterlegt werden. Die Angabe muss in Sekunden gemacht werden.</p>
-      </li>
-      <li>
-        <h5><var>$wiegezeit</var></h5>
-        <p>Beim Versand der Einladungen zu einem Termin wird im automatischen Text, der in die eMail eingestellt wird, auch gleich eine Aufforderung für diejenigen, die zum Wiegen ein-geteilt sind, geschrieben, wann sie zu erscheinen haben. Die Uhrzeit dafür kann hier hinterlegt werden.</p>
-        <p>Die Standardvorgabe dafür ist: <kbd>"xxx"</kbd>. (Marker für den Obmann, da Wiegezeiten variabel!)</p>
-      </li>
-      <li>
-        <h5><var>$endewiegezeit</var></h5>
-        <p>Diese Variable hat die gleiche Funktion, wie die Variable Wiegen, allerdings muss hier die Zeit eingegeben werden, zu der alle anderen Eingeteilten zu erscheinen haben, die nicht zum Wiegen müssen.</p>
-      </li>
-      <li>
-        <h5><var>$homepage</var></h5>
-        <p>Hier kann die Homepage des jeweiligen Verbandes angegeben werden. Damit wird der Link im System oben Links versorgt.</p>
-      </li>
-      <li>
-        <h5><var>$downloadbereich</var></h5>
-        <p>Diese Variable steuert den Menüpunkt <a href="../userguide/index.xhtml#detail-download">Downloadarea</a> im Hauptsystem. Hier muss die URL eingegeben werden, an der sich alle Dateien befinden, die für die User zum Download bereitgestellt werden sollen.</p>
+        <h5>
+          <var>$default_locale</var>
+        </h5>
+        <p>Hier muss die Standard-Sprachlokalisierung eingestellt werden. Diese kommt zur Anwendung, wenn das System
+          beim Kontakt mit einem Internet Browser keine passende Lokalisierung finden kann, die der Browser akzeptiert.
+          Hilfsweise wird dann diese Lokalisierung verwendet.</p>
       </li>
     </ul>
     <h4>Datenbankzugangsdaten</h4>
-    <p>Die folgenden Variablen müssen korrekt eingestellt sein, damit das System auf die Datenbank Zugriff nehmen kann. Die Daten müssen beim Provider oder dem zuständigen Webmaster erfragt werden, falls diese nicht bekannt sind.</p>
+    <p>Die folgenden Variablen müssen korrekt eingestellt sein, damit das System auf die Datenbank Zugriff nehmen kann.
+      Die Daten müssen beim Provider oder dem zuständigen Webmaster erfragt werden, falls diese nicht bekannt sind.
+    </p>
     <ul>
       <li>
-        <h5><var>$dbms</var></h5>
-        <p>Hier muss angegeben werden, welches Datenbankmanagementsystem benutzt wird. Im Moment wird MySQL und PostgreSQL unterstützt. Es muss eine Datei im Verzeichnis <code>application/data</code> vorliegen, deren Name mit dem Wert der Variablen übereinstimmt (ohne <kbd>.php</kbd>)!</p>
+        <h5>
+          <var>$dbms</var>
+        </h5>
+        <p>
+          Hier muss angegeben werden, welches Datenbankmanagementsystem benutzt wird. Im Moment wird MySQL und
+          PostgreSQL unterstützt. Es muss eine Datei im Verzeichnis
+          <code>application/data</code>
+          vorliegen, deren Name mit dem Wert der Variablen übereinstimmt (ohne
+          <kbd>.php</kbd>
+          )!
+        </p>
       </li>
       <li>
-        <h5><var>$username</var></h5>
+        <h5>
+          <var>$username</var>
+        </h5>
         <p>Hier muss der Username eingetragen werden, der für die Datenbank vorgegeben wurde.</p>
-        <p>Sollte es einen getrennten User für den Adminzugang geben, kann er unter <var>$username_admin</var> angegeben werden.<br />Ansonsten sollte diese Variable so gesetzt sein: <kbd>$username_admin = $username;</kbd></p>
+        <p>
+          Sollte es einen getrennten User für den Adminzugang geben, kann er unter
+          <var>$username_admin</var>
+          angegeben werden.
+          <br />
+          Ansonsten sollte diese Variable so gesetzt sein:
+          <kbd>$username_admin = $username;</kbd>
+        </p>
       </li>
       <li>
-        <h5><var>$password</var></h5>
+        <h5>
+          <var>$password</var>
+        </h5>
         <p>Hier muss das Passwort passend zum Usernamen eingetragen werden.</p>
-        <p>Sollte es einen getrennten User für den Adminzugang geben, kann das Passwort für diesen unter <var>$password_admin</var> angegeben werden.<br />Ansonsten sollte diese Variable so gesetzt sein: <kbd>$password_admin = $password;</kbd></p>
+        <p>
+          Sollte es einen getrennten User für den Adminzugang geben, kann das Passwort für diesen unter
+          <var>$password_admin</var>
+          angegeben werden.
+          <br />
+          Ansonsten sollte diese Variable so gesetzt sein:
+          <kbd>$password_admin = $password;</kbd>
+        </p>
       </li>
       <li>
-        <h5><var>$database</var></h5>
+        <h5>
+          <var>$database</var>
+        </h5>
         <p>Hier muss der Name der Datenbank eingestellt werden, die vom Provider bzw. Web-master zugeteilt wurde.</p>
       </li>
       <li>
-        <h5><var>$host</var></h5>
-        <p>Hier muss der Name bzw. die IP-Adresse des Rechners angegeben werden, auf dem der Datenbankserver läuft. In der Regel wird im Internet der Rechner, auf dem dieses System liegt, auch der Rechner sein, auf dem der Datenbankserver läuft. In diesem Fall kann die Vorgabe <kbd>localhost</kbd> so bestehen bleiben, wie sie schon ist.</p>
+        <h5>
+          <var>$host</var>
+        </h5>
+        <p>
+          Hier muss der Name bzw. die IP-Adresse des Rechners angegeben werden, auf dem der Datenbankserver läuft. In
+          der Regel wird im Internet der Rechner, auf dem dieses System liegt, auch der Rechner sein, auf dem der
+          Datenbankserver läuft. In diesem Fall kann die Vorgabe
+          <kbd>localhost</kbd>
+          so bestehen bleiben, wie sie schon ist.
+        </p>
       </li>
       <li>
-        <h5><var>$tab_prefix</var></h5>
-        <p>Um zu gewährleisten, dass die Tabellen in einer Datenbank mit mehreren anderen Tabellen, die nicht von KRAS stammen, zusammen existieren können, kann hier ein Präfix angegeben wird, der bei der Anlage der Tabellen vorangestellt wird. Sollte diese Variable nachträglich geändert werden, müssen alle vorhandenen Tabellen manuell umbenannt werden!</p>
+        <h5>
+          <var>$tab_prefix</var>
+        </h5>
+        <p>Um zu gewährleisten, dass die Tabellen in einer Datenbank mit mehreren anderen Tabellen, die nicht von KRAS
+          stammen, zusammen existieren können, kann hier ein Präfix angegeben wird, der bei der Anlage der Tabellen
+          vorangestellt wird. Sollte diese Variable nachträglich geändert werden, müssen alle vorhandenen Tabellen
+          manuell umbenannt werden!
+        </p>
+      </li>
+    </ul>
+    <h4>Einstellungen für die Session</h4>
+    <ul>
+      <li>
+        <h5>
+          <var>$gueltig</var>
+        </h5>
+        <p>Die User werden mit sog. Sessions überwacht. Eine Session kontrolliert, ob der User aktiv im System tätig
+          ist. Ist dies eine vorgegebene Zeit lang nicht mehr der Fall, wird der User automatisch abgemeldet. Dies soll
+          vor allem verhindern, dass der User nicht mehr abgemeldet wird, falls er das selbst vergisst.
+        </p>
+        <p>Wie lange die besagte vorgegebene Zeitspanne ist, kann in dieser Variable hinterlegt werden. Die Angabe muss
+          in Sekunden gemacht werden.
+        </p>
+      </li>
+      <li>
+        <h5><var>$pw_enc_strength</var></h5>
+        <p>Legt fest, wie stark die Passwörter verschlüsselt werden sollen, wenn das Passwort geändert wird. Je höher die Zahl, desto stärker die Verschlüsselung.<br />Die angegebene Zahl muss zwischen <kbd>4</kbd> und <kbd>31</kbd> liegen.</p>
+        <p>Standardwert: <kbd>8</kbd></p>
       </li>
     </ul>
     <h4>Maileinstellungen</h4>
     <p>Die folgenden 6 Variablen betreffen die Mailfunktionen des Systems.</p>
     <ul>
       <li>
-        <h5><var>$mail_once</var></h5>
-        <p>Da manche Anbieter von Webspace bestimmte Funktionalitäten sperren, v.a. im Bereich des eMail-Versands, sind in KRAS zwei verschiedene Mailmethoden realisiert.</p>
-        <p>Ist <var>$mail_once</var> auf <kbd>false</kbd> gesetzt, wird eine eMail an jeden der Empfänger einzeln versandt.<br />Vorteil: Diese Methodik funktioniert mit größerer Sicherheit, da manche Provider den Versand von einer Mail an mehrere Empfänger gleichzeitig nicht zulassen und dies so umgangen wird. Außerdem ist dies auch datenschutzfreundlicher und ggf. sogar aufgrund gesetzlicher Vorgaben nötig.<br />Nachteil: Die Empfänger können nicht sehen, wer die eMail definitiv noch bekommen hat!</p>
-        <p>Ist <var>$mail_once</var> auf <kbd>true</kbd> gesetzt, wird gleichzeitig an alle Empfänger auf einmal geschickt. Die Vor- und Nachteile bei dieser Vorgehensweise sind exakt umgekehrt.</p>
-        <p>Die Variable ist standardmäßig auf <kbd>false</kbd> gesetzt. Bitte hier nur <kbd>true</kbd> und <kbd>false</kbd> (ohne Anführungszeichen) verwenden!</p>
+        <h5>
+          <var>$mail_once</var>
+        </h5>
+        <p>Da manche Anbieter von Webspace bestimmte Funktionalitäten sperren, v.a. im Bereich des eMail-Versands, sind
+          in KRAS zwei verschiedene Mailmethoden realisiert.
+        </p>
+        <p>
+          Ist
+          <var>$mail_once</var>
+          auf
+          <kbd>false</kbd>
+          gesetzt, wird eine eMail an jeden der Empfänger einzeln versandt.
+          <br />
+          Vorteil: Diese Methodik funktioniert mit größerer Sicherheit, da manche Provider den Versand von einer Mail an
+          mehrere Empfänger gleichzeitig nicht zulassen und dies so umgangen wird. Außerdem ist dies auch
+          datenschutzfreundlicher und ggf. sogar aufgrund gesetzlicher Vorgaben nötig.
+          <br />
+          Nachteil: Die Empfänger können nicht sehen, wer die eMail definitiv noch bekommen hat!
+        </p>
+        <p>
+          Ist
+          <var>$mail_once</var>
+          auf
+          <kbd>true</kbd>
+          gesetzt, wird gleichzeitig an alle Empfänger auf einmal geschickt. Die Vor- und Nachteile bei dieser
+          Vorgehensweise sind exakt umgekehrt.
+        </p>
+        <p>
+          Die Variable ist standardmäßig auf
+          <kbd>false</kbd>
+          gesetzt. Bitte hier nur
+          <kbd>true</kbd>
+          und
+          <kbd>false</kbd>
+          (ohne Anführungszeichen) verwenden!
+        </p>
       </li>
       <li>
-        <h5><var>$mailtype</var></h5>
-        <p>Je nachdem, welche Mailmethode vom Provider zur Verfügung gestellt wird, muss hier die entsprechende hinterlegt werden. Mögliche Einstellungen sind <kbd>SMTP</kbd>, <kbd>sendmail</kbd> oder <kbd>mail</kbd>.</p>
+        <h5>
+          <var>$mailtype</var>
+        </h5>
+        <p>
+          Je nachdem, welche Mailmethode vom Provider zur Verfügung gestellt wird, muss hier die entsprechende
+          hinterlegt werden. Mögliche Einstellungen sind
+          <kbd>SMTP</kbd>
+          ,
+          <kbd>sendmail</kbd>
+          oder
+          <kbd>mail</kbd>
+          .
+        </p>
         <ul>
-          <li><kbd>SMTP</kbd> baut eine direkte Verbindung zu einem Mailserver auf.<br />Ist diese Option gewählt, müssen die anderen 4 Mailvariablen (jeweils beginnend mit „smtp_“) ebenfalls konfiguriert werden – in den anderen beiden Fällen sind diese irrelevant.</li>
-          <li><kbd>sendmail</kbd> nutzt das gleichnamige Programm, dass häufig auf Webservern zur Verfügung steht</li>
-          <li><kbd>mail</kbd> ruft die PHP-eigene Mailfunktion auf.</li>
+          <li>
+            <kbd>SMTP</kbd>
+            baut eine direkte Verbindung zu einem Mailserver auf.
+            <br />
+            Ist diese Option gewählt, müssen die anderen 4 Mailvariablen (jeweils beginnend mit „smtp_“) ebenfalls
+            konfiguriert werden – in den anderen beiden Fällen sind diese irrelevant.
+          </li>
+          <li>
+            <kbd>sendmail</kbd>
+            nutzt das gleichnamige Programm, dass häufig auf Webservern zur Verfügung steht
+          </li>
+          <li>
+            <kbd>mail</kbd>
+            ruft die PHP-eigene Mailfunktion auf.
+          </li>
         </ul>
       </li>
       <li>
-        <h5><var>$smtp_host</var></h5>
-        <p>Hier muss der Hostname des SMTP-Dienstes angegeben werden. (z.B. <samp>mail.b-j-v.de</samp>)</p>
+        <h5>
+          <var>$smtp_host</var>
+        </h5>
+        <p>
+          Hier muss der Hostname des SMTP-Dienstes angegeben werden. (z.B.
+          <samp>mail.b-j-v.de</samp>
+          )
+        </p>
       </li>
       <li>
-        <h5><var>$smtp_auth</var></h5>
-        <p>Ist der SMTP-Dienst mit einer Authentifizierung versehen, muss hier <kbd>true</kbd> stehen (Achtung: keine doppelten Hochkommas!!!), ansonsten <kbd>false</kbd>.<br />Fragen Sie ggf. beim Provider nach!</p>
+        <h5>
+          <var>$smtp_auth</var>
+        </h5>
+        <p>
+          Ist der SMTP-Dienst mit einer Authentifizierung versehen, muss hier
+          <kbd>true</kbd>
+          stehen (Achtung: keine doppelten Hochkommas!!!), ansonsten
+          <kbd>false</kbd>
+          .
+          <br />
+          Fragen Sie ggf. beim Provider nach!
+        </p>
       </li>
       <li>
-        <h5><var>$smtp_user</var></h5>
+        <h5>
+          <var>$smtp_user</var>
+        </h5>
         <p>Hier muss der Username für die Authentifizierung stehen.</p>
       </li>
       <li>
-        <h5><var>$smtp_pwd</var></h5>
+        <h5>
+          <var>$smtp_pwd</var>
+        </h5>
         <p>Hier muss das Passwort passend zum Usernamen für die Authentifizierung stehen.</p>
+      </li>
+    </ul>
+    <h4>Weitere Angaben</h4>
+    <ul>
+      <li>
+        <h5>
+          <var>$homepage</var>
+        </h5>
+        <p>Hier kann die Homepage des jeweiligen Verbandes angegeben werden. Damit wird der Link im System oben Links
+          versorgt.
+        </p>
+      </li>
+      <li>
+        <h5>
+          <var>$downloadbereich</var>
+        </h5>
+        <p>
+          Diese Variable steuert den Menüpunkt
+          <a href="../userguide/index.xhtml#detail-download">Downloadarea</a>
+          im Hauptsystem. Hier muss die URL eingegeben werden, an der sich alle Dateien befinden, die für die User zum
+          Download bereitgestellt werden sollen.
+        </p>
+      </li>
+      <li>
+        <h5><var>$birthdays_ahead</var></h5>
+        <p>Auf dem Einstiegsbildschirm nach der Anmeldung wird authorisierten Benutzern eine Liste mit anstehenden Geburtstagen angezeigt. Mit dieser Einstellung kann festgelegt werden, wie viele Tage in die Zukunft diese Liste reichen soll.</p>
+        <p>Standardwert: <kbd>31</kbd></p>
       </li>
     </ul>
     <h4>Angaben für das Reporting</h4>
     <ul>
       <li>
-        <h5><var>$rep_zeitraum_noten</var></h5>
-        <p>In dieser Variablen wird der Monat für die Notenauswertung angegeben, wann der Notenschnitt gemacht werden soll. (Bsp. <samp>11</samp>: Die Noten werden immer vom November des Vorjahres bis Oktober gerechnet).<br />Soll der Notenschnitt dem gewöhnlichen Jahr entsprechen, muss die 13 angegeben werden.</p>
+        <h5>
+          <var>$rep_zeitraum_noten</var>
+        </h5>
+        <p>
+          In dieser Variablen wird der Monat für die Notenauswertung angegeben, wann der Notenschnitt gemacht werden
+          soll. (Bsp.
+          <samp>11</samp>
+          : Die Noten werden immer vom November des Vorjahres bis Oktober gerechnet).
+          <br />
+          Soll der Notenschnitt dem gewöhnlichen Jahr entsprechen, muss die 13 angegeben werden.
+        </p>
       </li>
       <li>
-        <h5><var>$rep_zeitraum_einsatz</var></h5>
-        <p>In dieser Variablen wird der Monat für die Einsatzauswerung angegeben, wann der Saisonschnitt gemacht werden soll. (Bsp. <samp>11</samp>: Die Noten werden immer vom November des Vorjahres bis Oktober gerechnet).<br />Soll der Notenschnitt dem gewöhnlichen Jahr entsprechen, muss die 13 angegeben werden.</p>
+        <h5>
+          <var>$rep_zeitraum_einsatz</var>
+        </h5>
+        <p>
+          In dieser Variablen wird der Monat für die Einsatzauswerung angegeben, wann der Saisonschnitt gemacht werden
+          soll. (Bsp.
+          <samp>11</samp>
+          : Die Noten werden immer vom November des Vorjahres bis Oktober gerechnet).
+          <br />
+          Soll der Notenschnitt dem gewöhnlichen Jahr entsprechen, muss die 13 angegeben werden.
+        </p>
       </li>
       <li>
-        <h5><var>$gewicht_schriftl</var></h5>
-        <p>Hier muss die Gewichtung der schriftlichen Note zum Durchschnitt der praktischen Noten angegeben werde, um einen Gesamtschnitt zu berechnen.</p>
+        <h5>
+          <var>$gewicht_schriftl</var>
+        </h5>
+        <p>Hier muss die Gewichtung der schriftlichen Note zum Durchschnitt der praktischen Noten angegeben werde, um
+          einen Gesamtschnitt zu berechnen.
+        </p>
         <p>Die Angabe muss zwischen 0 und 1 liegen und ein mit Punkt getrennter Dezimalwert sein.</p>
       </li>
       <li>
-        <h5><var>$ebene</var></h5>
-        <p>Hier kann eine Liste der Einsatzebenen für das Reporting hinterlegt werden. Die oberste Ebene muss mit <kbd>0</kbd>, die nächste mit <kbd>1</kbd> usw. in eckigen Klammern hinter der Variablen angegeben werden. (Bsp. für oberste Ebene: <samp>$ebene[0]="Landesebene"</samp>)</p>
+        <h5>
+          <var>$ebene</var>
+        </h5>
+        <p>
+          Hier kann eine Liste der Einsatzebenen für das Reporting hinterlegt werden. Die oberste Ebene muss mit
+          <kbd>0</kbd>
+          , die nächste mit
+          <kbd>1</kbd>
+          usw. in eckigen Klammern hinter der Variablen angegeben werden. (Bsp. für oberste Ebene:
+          <samp>$ebene[0]="Landesebene"</samp>
+          )
+        </p>
       </li>
     </ul>
-    <h3><a name="css-layout" />Layout mit CSS-Dateien</h3>
-    <p>Das Layout des System ist vollständig mit CSS (Cascaded Stylesheets) abgebildet und darüber anzupassen.<br />Die betreffenden Dateien liegen unter <code>application/public/lib/css</code></p>
+    <h3>
+      <a name="css-layout" />
+      Layout mit CSS-Dateien
+    </h3>
+    <p>
+      Das Layout des System ist vollständig mit CSS (Cascaded Stylesheets) abgebildet und darüber anzupassen.
+      <br />
+      Die betreffenden Dateien liegen unter
+      <code>application/public/lib/css</code>
+    </p>
     <p>Es sollte beachtet werden, dass hierfür Kenntnisse der Sprache CSS beherrscht werden sollte!</p>
-    <p>Die wesentlichen Layout-Definitionen finden sich in der Datei <code>layout.css</code> (z.B. Aussehen von Überschneidungen, neuen Einträgen etc.). Die Dateien <code>backend.css</code> und <code>frontend.css</code> steuern den restlichen Aufbau der verschiedenen Dialoge.<br />Mit diesen drei Dateien kann man das gesamte Aussehen des Systems an seine eigenen Bedürfnisse anpassen.</p>
-    <p>Die Einstellungen für die Standardtags befinden sich am Anfang. Spezielle Klassen und Attribute sind weiter hinten und auch entsprechend kommentiert.</p>
-    <h3><a name="pictures" />Grafiken und Bilder</h3>
-    <p>Alle Grafiken des Systems sind im Ordner <code>application/public/lib/grafiken</code> zusammengefasst und können dort bei Bedarf geändert werden, um sie dem Layout anzupassen. Dazu die Grafik einfach durch eine andere ersetzen, die den gleichen Dateinamen trägt. Wir bitten jedoch, das Logo der FH Augsburg sowie das Projektteam unangetastet zu lassen.</p>
-    <p>Bilder der Kampfrichter können im Ordner <code>application/public/pics</code> als jpg-Datei abgelegt werden. Der Dateiname muss die Benutzernummer des jeweiligen KRs sein, gefolgt von <kbd>.jpg</kbd>. Die Benutzernummer kann in der <a href="../userguide_extended/index.xhtml#detail-usermgmt">KR-Verwaltung</a> nachgesehen werden.<br />Die Bilder dürfen das Format 140x185 Pixel nicht überschreiten und sollten nicht größer als 30 KB sein.</p>
-    <h2><a name="admin-account" />Administrationszugang</h2>
-    <p>Neben dem normalen Zugang der Kampfrichter gibt es zusätzlich einen fest vorge-gebenen Administratorenzugang, mit dem u.a. die ersten Einstellungen bei der Installa-tion gemacht und Eingriffe ins System vorgenommen, sowie bestimmte organisatorische Eigenschaften gepflegt werden können.</p>
+    <p>
+      Die wesentlichen Layout-Definitionen finden sich in der Datei
+      <code>layout.css</code>
+      (z.B. Aussehen von Überschneidungen, neuen Einträgen etc.). Die Dateien
+      <code>backend.css</code>
+      und
+      <code>frontend.css</code>
+      steuern den restlichen Aufbau der verschiedenen Dialoge.
+      <br />
+      Mit diesen drei Dateien kann man das gesamte Aussehen des Systems an seine eigenen Bedürfnisse anpassen.
+    </p>
+    <p>Die Einstellungen für die Standardtags befinden sich am Anfang. Spezielle Klassen und Attribute sind weiter
+      hinten und auch entsprechend kommentiert.
+    </p>
+    <h3>
+      <a name="pictures" />
+      Grafiken und Bilder
+    </h3>
+    <p>
+      Alle Grafiken des Systems sind im Ordner
+      <code>application/public/lib/grafiken</code>
+      zusammengefasst und können dort bei Bedarf geändert werden, um sie dem Layout anzupassen. Dazu die Grafik einfach
+      durch eine andere ersetzen, die den gleichen Dateinamen trägt. Wir bitten jedoch, das Logo der FH Augsburg sowie
+      das Projektteam unangetastet zu lassen.
+    </p>
+    <p>
+      Bilder der Kampfrichter können im Ordner
+      <code>application/public/pics</code>
+      als jpg-Datei abgelegt werden. Der Dateiname muss die Benutzernummer des jeweiligen KRs sein, gefolgt von
+      <kbd>.jpg</kbd>
+      . Die Benutzernummer kann in der
+      <a href="../userguide_extended/index.xhtml#detail-usermgmt">KR-Verwaltung</a>
+      nachgesehen werden.
+      <br />
+      Die Bilder dürfen das Format 140x185 Pixel nicht überschreiten und sollten nicht größer als 30 KB sein.
+    </p>
+    <h2>
+      <a name="admin-account" />
+      Administrationszugang
+    </h2>
+    <p>Neben dem normalen Zugang der Kampfrichter gibt es zusätzlich einen fest vorge-gebenen Administratorenzugang, mit
+      dem u.a. die ersten Einstellungen bei der Installa-tion gemacht und Eingriffe ins System vorgenommen, sowie
+      bestimmte organisatorische Eigenschaften gepflegt werden können.
+    </p>
     <p>Im Folgenden werden die einzelnen Menüpunkte beschrieben:</p>
-    <h3><a name="overview" />Übersicht</h3>
+    <h3>
+      <a name="overview" />
+      Übersicht
+    </h3>
     <p>Unter Übersicht findet man eine Auflistung der Menüpunkte mit einer kurzen Erklärung zu jedem Punkt.</p>
-    <p>Sollten leere Tabellen mit Standarddaten befüllt werden können, werden an dieser Stelle entsprechende Optionen und Links sichtbar.</p>
-    <h3><a name="events" />Termine</h3>
-    <p>Dieser Dialog dient der Kontrolle der Termindaten. Da die Termine und Einteilungen über mehrere Jahre archiviert werden sollen, müssen die Termine dann gesammelt gelöscht werden können. Dies kann in diesem Menü durchgeführt werden.</p>
-    <p>Im Einstiegsbildschirm muss das Datum angegeben werden, vor dem die fraglichen Termine liegen sollen. Durch Klick auf <code>anzeigen</code> erhält man so eine Liste aller fraglichen Termine. Über einen Radiobutton kann nun gewählt werden, ob man alle angezeigten Termine gleich löschen, oder ob man nur bestimmte Termine selektieren und diese dann löschen will.<br />Termine können einfach mit der Checkbox vor jedem Termin selektiert werden.</p>
-    <h3><a name="districts" />Bezirke</h3>
-    <p>Im Menü Bezirke lassen sich die einzelnen Bezirke sowie die höheren Gebietsstufen pflegen, die im Hauptsystem verfügbar sein sollen.</p>
-    <p>Der Einstiegsbildschirm ist zweigeteilt.<br />Auf der linken Seite werden die vorhandenen Bezirke und Gebiete mit ihren Attributen angezeigt. Jeder Eintrag hat eine <code>ID</code>. Die <code>ID</code> wird gefolgt vom Namen der Ebene und von der Eigenschaft <code>in Bezirk</code>. Über diese Eigenschaft lässt sich eine Hierarchie der einzelnen Einträge herstellen</p>
-    <p class="example"><em>Bsp.</em>: Beim Eintrag <q>Schwaben</q> steht hier die ID von <q>Südbayern</q>, da Schwaben zu Südbayern gehört. Beim Eintrag <q>Südbayern</q> steht wiederum die ID von <q>Bayern</q>, im Eintrag von <q>Bayern</q> steht jedoch nichts, da Bayern die höchste Ebene im Bayerischen Judo-Verband ist!</p>
-    <p>Die angezeigten Einträge lassen sich durch Klick auf  bearbeiten. Durch Klick auf  wird der Eintrag gelöscht.</p>
-    <p class="attention"><em>Achtung</em>: Der Eintrag kann nur gelöscht werden, wenn von ihm kein anderes Element der Datenbank abhängt. Sollte dies der Fall sein, gibt das System eine Liste aller Elemente aus, die diesen Eintrag noch benutzen.</p>
-    <p>Auf der rechten Seite des Einstiegsbildschirms können neue Ebenen angelegt werden. Dazu müssen die ID und die Bezeichnung eingegeben und der Oberbezirk ausgewählt werden. Mit Klick auf die Schaltfläche <code>Bezirk anlegen</code> wird der neue Bezirk erstellt. Die Schaltfläche <code>Zurücksetzen</code> löscht die gemachten Eingaben wieder.</p>
-    <p class="info"><em>Hinweis</em>: Bei der Vergabe der ID sollte darauf geachtet werden, eine entsprechende Ordnung herzustellen, da im Hauptsystem zumeist nach dieser ID sortiert wird.</p>
-    <h3><a name="usertypes" />Userarten</h3>
-    <p>Das Menü Userarten ist im Einstiegsbildschirm gleich aufgebaut, wie das Menü <a href="#districts">Bezirke</a>. Zusätzlich gibt es in der Tabelle auf der linken Seite für jede Zeile den Button <img src="img/view.png" alt="anzeigen" /> zum Anzeigen der Details eines Eintrages. In den Details werden dann die Berechtigungen der Userart im Hauptmenü des Systems, sowie die Berechtigungen zum Anzeigen bzw. Erstellen von Terminen und Einteilungen für jeden Bezirk angezeigt.</p>
-    <h4><a name="usertypes-edit" />Userart bearbeiten</h4>
-    <p>Beim Bearbeiten eines Eintrages gilt es, folgendes zu beachten:<br />Im ersten Bildschirm kann links die ID, die Bezeichnung sowie die Menüberechtigung verändert werden. Auf der rechten Seite müssen die Bezirke angeklickt werden, für die die zu bearbeitende Userart überhaupt eine Berechtigung bekommen soll. Nach Klick auf den Button <code>weiter</code> kann dann in einem weiteren Bildschirm für die angeklickten Bezirke angegeben werden, ob derjenige Termine anzeigen bzw. erstellen können soll.<br />Ist für einen Bezirk weder anzeigen noch erstellen angeklickt, kann die Userart nur in der Karteiverwaltung und im Notenarchiv bzw. Mailfunktion die KRs des jeweiligen Bezirks verwalten.</p>
-    <p>Erst wenn in diesem Bildschirm auf <code>Änderungen speichern</code> geklickt wird, sind alle Veränderungen auch abgelegt!</p>
-    <h4><a name="usertypes-create" />Userart anlegen</h4>
-    <p>Beim Anlegen einer neuen Userart auf der rechten Seite des Einstiegsbildschirms müssen zuerst alle Menüberechtigungen angegeben werden, die die neue Userart haben soll, sowie deren Bezeichnung. Die ID wird beim Anlegen automatisch vergeben – sie kann aber nach dem Anlegen über <a href="#usertypes-edit">Userart bearbeiten</a> nachträglich verändert werden. Durch Klick auf den Button <code>Userart anlegen</code> gelangt man zu einem weiteren Formular. Hier muss angegeben werden, für welche Bezirke die neue Userart eine Berechtigung zum Ändern bzw. Erstellen von Terminen bzw. Einteilungen bekommen soll. Mit Klick auf <code>weiter</code> erhält man eine Tabelle aller angeklickten Bezirke und kann nun auswählen, welche Berechtigungen pro gewähltem Bezirk bestehen.</p>
-    <h3><a name="licenses" />Lizenzen</h3>
-    <p>Das Menü Lizenzen läuft in seiner Funktionsweise völlig analog zum Menü <a href="#districts">Bezirke</a>.</p>
-    <p>Hier gilt nur zu beachten, dass die Lizenz-ID alphanumerisch – also mit Buchstaben, Zahlen und Sonderzeichen – vergeben werden kann!<br />Die ID ist auch das Attribut, dass im Hauptsystem bei der Bearbeitung und Ansicht der Kampfrichter angezeigt wird.</p>
-    <p class="attention"><em>Achtung</em>: Lizenzen können nur gelöscht werden, wenn sie in keinem Kampfrichtereintrag mehr verwendet werden!</p>
-    <h3><a name="graduations" />Gürtel</h3>
-    <p>Das Menü Gürtel läuft in seiner Funktionsweise völlig analog zum Menü <a href="#districts">Bezirke</a>.</p>
-    <p>Hier gilt nur zu beachten, dass die Guertel-ID alphanumerisch – also mit Buchstaben, Zahlen und Sonderzeichen – vergeben werden kann!<br />Die ID ist auch das Attribut, dass im Hauptsystem bei der Bearbeitung und Ansicht der Kampfrichter angezeigt wird.</p>
-    <p class="attention"><em>Achtung</em>: Gürtel können nur gelöscht werden, wenn sie in keinem Kampfrichtereintrag mehr verwendet werden!</p>
-    <h3><a name="change_password" />Passwort ändern</h3>
-    <p>Unter Passwort ändern lässt sich das Administratorenpasswort verändern. Der Benutzername ist fest vorgegeben, weshalb nur das Passwort geändert werden kann!</p>
-    <p>Es muss das alte Passwort, im Anschluss daran das neue Passwort und eine wiederholte Eingabe des neuen Passwortes zur Absicherung gegen Tippfehler angegeben werden.</p>
-    <p>Durch Klick auf den Button <code>Passwort ändern</code> wird die Änderung durchgeführt.</p>
-    <h3><a name="import_user" />User importieren</h3>
-    <p>In diesem Menüpunkt kann eine ganze Liste von Usern, die als sog. CSV-Datei abgelegt ist, ins System eingespielt werden.<br />(Eine CSV-Datei kann man sehr einfach über ein Standard-Tabellenkalkulations-programm erstellen.)</p>
-    <p>Dazu muss man den Pfad angeben, wo die Datei liegt, oder auch über den Button <code>Durchsuchen</code> die Datei auswählen. Das System lädt nach Klick auf den entsprechenden Button diese Datei in die Anwendung und legt nach Klick auf den entsprechenden Hyperlink die User an, sofern es möglich ist. Am Ende des Imports wird eine Liste aller Datensätze ausgegeben mit einer Meldung am Schluss jeder Zeile, ob der Datensatz übernommen werden konnte.</p>
-    <p>Genauere Hinweise zum Import können dem Tutorial, das man über den Einstiegsbildschirm dieses Dialogs erreichen kann, entnommen werden.</p>
-    <p>Beim Import werden der angegebene Heimatbezirk und die dazugehörigen Oberbezirke als zugeordnet eingepflegt. Zugleich wird als Position die Userart gewählt werden, die die niedrigste Berechtigung hat!</p>
-    <h3><a name="import_clubs" />Vereine importieren</h3>
-    <p>TODO</p>
-    <h3><a name="user_mgmt" />KR-Kartei bearbeiten</h3>
-    <p>Dieser Menüpunkt ruft den gleichen Dialog auf, wie er auch im normalen System unter <a href="../userguide_extended/index.xhtml#detail-usermgmt">Verwaltung KR-Kartei</a> erscheint. Dies dient der Korrektur und Fehlerbehebung im Notfall, sowie dem Anlegen der ersten Benutzer nach der Installation.</p>
-    <h3><a name="logout" />Logout</h3>
-    <p>Mit Klick auf den Button <code>logout</code> wird die Administratorensitzung beendet. Es sollte immer dieser Button benutzt werden.</p>
-    <p>Geschieht das nicht, wird man automatisch nach einer vorgegebenen Zeitspanne vom System als abgemeldet gespeichert und beim nächsten Login daran erinnert, sich selber abzumelden.</p>
-    <h2><a name="data_interface" />Automatische Datenschnittstelle</h2>
+    <p>Sollten leere Tabellen mit Standarddaten befüllt werden können, werden an dieser Stelle entsprechende Optionen
+      und Links sichtbar.
+    </p>
+    <h3>
+      <a name="events" />
+      Termine
+    </h3>
+    <p>Dieser Dialog dient der Kontrolle der Termindaten. Da die Termine und Einteilungen über mehrere Jahre archiviert
+      werden sollen, müssen die Termine dann gesammelt gelöscht werden können. Dies kann in diesem Menü durchgeführt
+      werden.
+    </p>
+    <p>
+      Im Einstiegsbildschirm muss das Datum angegeben werden, vor dem die fraglichen Termine liegen sollen. Durch Klick
+      auf
+      <code>anzeigen</code>
+      erhält man so eine Liste aller fraglichen Termine. Über einen Radiobutton kann nun gewählt werden, ob man alle
+      angezeigten Termine gleich löschen, oder ob man nur bestimmte Termine selektieren und diese dann löschen will.
+      <br />
+      Termine können einfach mit der Checkbox vor jedem Termin selektiert werden.
+    </p>
+    <h3>
+      <a name="districts" />
+      Bezirke
+    </h3>
+    <p>Im Menü Bezirke lassen sich die einzelnen Bezirke sowie die höheren Gebietsstufen pflegen, die im Hauptsystem
+      verfügbar sein sollen.
+    </p>
+    <p>
+      Der Einstiegsbildschirm ist zweigeteilt.
+      <br />
+      Auf der linken Seite werden die vorhandenen Bezirke und Gebiete mit ihren Attributen angezeigt. Jeder Eintrag hat
+      eine
+      <code>ID</code>
+      . Die
+      <code>ID</code>
+      wird gefolgt vom Namen der Ebene und von der Eigenschaft
+      <code>in Bezirk</code>
+      . Über diese Eigenschaft lässt sich eine Hierarchie der einzelnen Einträge herstellen
+    </p>
+    <p class="example">
+      <em>Bsp.</em>
+      : Beim Eintrag
+      <q>Schwaben</q>
+      steht hier die ID von
+      <q>Südbayern</q>
+      , da Schwaben zu Südbayern gehört. Beim Eintrag
+      <q>Südbayern</q>
+      steht wiederum die ID von
+      <q>Bayern</q>
+      , im Eintrag von
+      <q>Bayern</q>
+      steht jedoch nichts, da Bayern die höchste Ebene im Bayerischen Judo-Verband ist!
+    </p>
+    <p>Die angezeigten Einträge lassen sich durch Klick auf bearbeiten. Durch Klick auf wird der Eintrag gelöscht.</p>
+    <p class="attention">
+      <em>Achtung</em>
+      : Der Eintrag kann nur gelöscht werden, wenn von ihm kein anderes Element der Datenbank abhängt. Sollte dies der
+      Fall sein, gibt das System eine Liste aller Elemente aus, die diesen Eintrag noch benutzen.
+    </p>
+    <p>
+      Auf der rechten Seite des Einstiegsbildschirms können neue Ebenen angelegt werden. Dazu müssen die ID und die
+      Bezeichnung eingegeben und der Oberbezirk ausgewählt werden. Mit Klick auf die Schaltfläche
+      <code>Bezirk anlegen</code>
+      wird der neue Bezirk erstellt. Die Schaltfläche
+      <code>Zurücksetzen</code>
+      löscht die gemachten Eingaben wieder.
+    </p>
+    <p class="info">
+      <em>Hinweis</em>
+      : Bei der Vergabe der ID sollte darauf geachtet werden, eine entsprechende Ordnung herzustellen, da im Hauptsystem
+      zumeist nach dieser ID sortiert wird.
+    </p>
+    <h3>
+      <a name="usertypes" />
+      Userarten
+    </h3>
+    <p>
+      Das Menü Userarten ist im Einstiegsbildschirm gleich aufgebaut, wie das Menü
+      <a href="#districts">Bezirke</a>
+      . Zusätzlich gibt es in der Tabelle auf der linken Seite für jede Zeile den Button
+      <img src="img/view.png" alt="anzeigen" />
+      zum Anzeigen der Details eines Eintrages. In den Details werden dann die Berechtigungen der Userart im Hauptmenü
+      des Systems, sowie die Berechtigungen zum Anzeigen bzw. Erstellen von Terminen und Einteilungen für jeden Bezirk
+      angezeigt.
+    </p>
+    <h4>
+      <a name="usertypes-edit" />
+      Userart bearbeiten
+    </h4>
+    <p>
+      Beim Bearbeiten eines Eintrages gilt es, folgendes zu beachten:
+      <br />
+      Im ersten Bildschirm kann links die ID, die Bezeichnung sowie die Menüberechtigung verändert werden. Auf der
+      rechten Seite müssen die Bezirke angeklickt werden, für die die zu bearbeitende Userart überhaupt eine
+      Berechtigung bekommen soll. Nach Klick auf den Button
+      <code>weiter</code>
+      kann dann in einem weiteren Bildschirm für die angeklickten Bezirke angegeben werden, ob derjenige Termine
+      anzeigen bzw. erstellen können soll.
+      <br />
+      Ist für einen Bezirk weder anzeigen noch erstellen angeklickt, kann die Userart nur in der Karteiverwaltung und im
+      Notenarchiv bzw. Mailfunktion die KRs des jeweiligen Bezirks verwalten.
+    </p>
+    <p>
+      Erst wenn in diesem Bildschirm auf
+      <code>Änderungen speichern</code>
+      geklickt wird, sind alle Veränderungen auch abgelegt!
+    </p>
+    <h4>
+      <a name="usertypes-create" />
+      Userart anlegen
+    </h4>
+    <p>
+      Beim Anlegen einer neuen Userart auf der rechten Seite des Einstiegsbildschirms müssen zuerst alle
+      Menüberechtigungen angegeben werden, die die neue Userart haben soll, sowie deren Bezeichnung. Die ID wird beim
+      Anlegen automatisch vergeben – sie kann aber nach dem Anlegen über
+      <a href="#usertypes-edit">Userart bearbeiten</a>
+      nachträglich verändert werden. Durch Klick auf den Button
+      <code>Userart anlegen</code>
+      gelangt man zu einem weiteren Formular. Hier muss angegeben werden, für welche Bezirke die neue Userart eine
+      Berechtigung zum Ändern bzw. Erstellen von Terminen bzw. Einteilungen bekommen soll. Mit Klick auf
+      <code>weiter</code>
+      erhält man eine Tabelle aller angeklickten Bezirke und kann nun auswählen, welche Berechtigungen pro gewähltem
+      Bezirk bestehen.
+    </p>
+    <h3>
+      <a name="licenses" />
+      Lizenzen
+    </h3>
+    <p>
+      Das Menü Lizenzen läuft in seiner Funktionsweise völlig analog zum Menü
+      <a href="#districts">Bezirke</a>
+      .
+    </p>
+    <p>
+      Hier gilt nur zu beachten, dass die Lizenz-ID alphanumerisch – also mit Buchstaben, Zahlen und Sonderzeichen –
+      vergeben werden kann!
+      <br />
+      Die ID ist auch das Attribut, dass im Hauptsystem bei der Bearbeitung und Ansicht der Kampfrichter angezeigt wird.
+    </p>
+    <p class="attention">
+      <em>Achtung</em>
+      : Lizenzen können nur gelöscht werden, wenn sie in keinem Kampfrichtereintrag mehr verwendet werden!
+    </p>
+    <h3>
+      <a name="graduations" />
+      Gürtel
+    </h3>
+    <p>
+      Das Menü Gürtel läuft in seiner Funktionsweise völlig analog zum Menü
+      <a href="#districts">Bezirke</a>
+      .
+    </p>
+    <p>
+      Hier gilt nur zu beachten, dass die Guertel-ID alphanumerisch – also mit Buchstaben, Zahlen und Sonderzeichen –
+      vergeben werden kann!
+      <br />
+      Die ID ist auch das Attribut, dass im Hauptsystem bei der Bearbeitung und Ansicht der Kampfrichter angezeigt wird.
+    </p>
+    <p class="attention">
+      <em>Achtung</em>
+      : Gürtel können nur gelöscht werden, wenn sie in keinem Kampfrichtereintrag mehr verwendet werden!
+    </p>
+    <h3>
+      <a name="change_password" />
+      Passwort ändern
+    </h3>
+    <p>Unter Passwort ändern lässt sich das Administratorenpasswort verändern. Der Benutzername ist fest vorgegeben,
+      weshalb nur das Passwort geändert werden kann!
+    </p>
+    <p>Es muss das alte Passwort, im Anschluss daran das neue Passwort und eine wiederholte Eingabe des neuen Passwortes
+      zur Absicherung gegen Tippfehler angegeben werden.
+    </p>
+    <p>
+      Durch Klick auf den Button
+      <code>Passwort ändern</code>
+      wird die Änderung durchgeführt.
+    </p>
+    <h3>
+      <a name="import_user" />
+      User importieren
+    </h3>
+    <p>
+      In diesem Menüpunkt kann eine ganze Liste von Usern, die als sog. CSV-Datei abgelegt ist, ins System eingespielt
+      werden.
+      <br />
+      (Eine CSV-Datei kann man sehr einfach über ein Standard-Tabellenkalkulations-programm erstellen.)
+    </p>
+    <p>
+      Dazu muss man den Pfad angeben, wo die Datei liegt, oder auch über den Button
+      <code>Durchsuchen</code>
+      die Datei auswählen. Das System lädt nach Klick auf den entsprechenden Button diese Datei in die Anwendung und
+      legt nach Klick auf den entsprechenden Hyperlink die User an, sofern es möglich ist. Am Ende des Imports wird eine
+      Liste aller Datensätze ausgegeben mit einer Meldung am Schluss jeder Zeile, ob der Datensatz übernommen werden
+      konnte.
+    </p>
+    <p>Genauere Hinweise zum Import können dem Tutorial, das man über den Einstiegsbildschirm dieses Dialogs erreichen
+      kann, entnommen werden.
+    </p>
+    <p>Beim Import werden der angegebene Heimatbezirk und die dazugehörigen Oberbezirke als zugeordnet eingepflegt.
+      Zugleich wird als Position die Userart gewählt werden, die die niedrigste Berechtigung hat!
+    </p>
+    <h3>
+      <a name="import_clubs" />
+      Vereine importieren
+    </h3>
+    <p>
+      Der Import der Vereine funktioniert analog dem
+      <a href="#import_user">Import von Usern</a>
+      . Das entsprechende Tutorial hält auch einen Passus über den Vereinsimport bereit.
+    </p>
+    <h3>
+      <a name="user_mgmt" />
+      KR-Kartei bearbeiten
+    </h3>
+    <p>
+      Dieser Menüpunkt ruft den gleichen Dialog auf, wie er auch im normalen System unter
+      <a href="../userguide_extended/index.xhtml#detail-usermgmt">Verwaltung KR-Kartei</a>
+      erscheint. Dies dient der Korrektur und Fehlerbehebung im Notfall, sowie dem Anlegen der ersten Benutzer nach der
+      Installation.
+    </p>
+    <h3>
+      <a name="logout" />
+      Logout
+    </h3>
+    <p>
+      Mit Klick auf den Button
+      <code>logout</code>
+      wird die Administratorensitzung beendet. Es sollte immer dieser Button benutzt werden.
+    </p>
+    <p>Geschieht das nicht, wird man automatisch nach einer vorgegebenen Zeitspanne vom System als abgemeldet
+      gespeichert und beim nächsten Login daran erinnert, sich selber abzumelden.
+    </p>
+    <h2>
+      <a name="data_interface" />
+      Automatische Datenschnittstelle
+    </h2>
     <p>TODO</p>
   </body>
 </html>
