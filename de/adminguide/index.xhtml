@@ -78,6 +78,9 @@
             <a href="#graduations">Gürtel</a>
           </li>
           <li>
+            <a href="#data_interface_manual">Datenaustausch</a>
+          </li>
+          <li>
             <a href="#change_password">Passwort ändern</a>
           </li>
           <li>
@@ -96,6 +99,14 @@
       </li>
       <li>
         <a href="#data_interface">Automatische Datenschnittstelle</a>
+        <ol>
+          <li>
+            <a href="#data_interface_manual">Manuelle Nutzung</a>
+          </li>
+          <li>
+            <a href="#data_interface_auto">Automatische Steuerung</a>
+          </li>
+        </ol>
       </li>
     </ol>
     <h2>
@@ -375,7 +386,8 @@
         </h5>
         <p>Hier muss die Standard-Sprachlokalisierung eingestellt werden. Diese kommt zur Anwendung, wenn das System
           beim Kontakt mit einem Internet Browser keine passende Lokalisierung finden kann, die der Browser akzeptiert.
-          Hilfsweise wird dann diese Lokalisierung verwendet.</p>
+          Hilfsweise wird dann diese Lokalisierung verwendet.
+        </p>
       </li>
     </ul>
     <h4>Datenbankzugangsdaten</h4>
@@ -468,9 +480,23 @@
         </p>
       </li>
       <li>
-        <h5><var>$pw_enc_strength</var></h5>
-        <p>Legt fest, wie stark die Passwörter verschlüsselt werden sollen, wenn das Passwort geändert wird. Je höher die Zahl, desto stärker die Verschlüsselung.<br />Die angegebene Zahl muss zwischen <kbd>4</kbd> und <kbd>31</kbd> liegen.</p>
-        <p>Standardwert: <kbd>8</kbd></p>
+        <h5>
+          <var>$pw_enc_strength</var>
+        </h5>
+        <p>
+          Legt fest, wie stark die Passwörter verschlüsselt werden sollen, wenn das Passwort geändert wird. Je höher die
+          Zahl, desto stärker die Verschlüsselung.
+          <br />
+          Die angegebene Zahl muss zwischen
+          <kbd>4</kbd>
+          und
+          <kbd>31</kbd>
+          liegen.
+        </p>
+        <p>
+          Standardwert:
+          <kbd>8</kbd>
+        </p>
       </li>
     </ul>
     <h4>Maileinstellungen</h4>
@@ -605,9 +631,17 @@
         </p>
       </li>
       <li>
-        <h5><var>$birthdays_ahead</var></h5>
-        <p>Auf dem Einstiegsbildschirm nach der Anmeldung wird authorisierten Benutzern eine Liste mit anstehenden Geburtstagen angezeigt. Mit dieser Einstellung kann festgelegt werden, wie viele Tage in die Zukunft diese Liste reichen soll.</p>
-        <p>Standardwert: <kbd>31</kbd></p>
+        <h5>
+          <var>$birthdays_ahead</var>
+        </h5>
+        <p>Auf dem Einstiegsbildschirm nach der Anmeldung wird authorisierten Benutzern eine Liste mit anstehenden
+          Geburtstagen angezeigt. Mit dieser Einstellung kann festgelegt werden, wie viele Tage in die Zukunft diese
+          Liste reichen soll.
+        </p>
+        <p>
+          Standardwert:
+          <kbd>31</kbd>
+        </p>
       </li>
     </ul>
     <h4>Angaben für das Reporting</h4>
@@ -959,6 +993,116 @@
       <a name="data_interface" />
       Automatische Datenschnittstelle
     </h2>
-    <p>TODO</p>
+    <p>
+      Für den Fall, dass KRAS auf mehreren Ebenen eingesetzt wird (z.B. auf Bundes-Ebene ein KRAS für die
+      Bundes-Einsätze und in den Landesverbänden jeweils ein KRAS für die Landeskampfrichterverwaltung), wurde eine
+      automatisierte
+      Schnittstelle zum Austausch der Einteilungsdaten geschaffen.
+      <br />
+      Diese Schnittstelle kann die Daten über die Einteilungen der Kampfrichter per Mail austauschen. Der Datenaustausch
+      geschieht datenschutzkonform, indem lediglich die Veranstaltungsdaten und ein Pseudonym für jeden eingeteilten
+      Kampfrichter genutzt wird.
+    </p>
+    <p>
+      Bei dem Pseudonym handelt es sich um die
+      <q>DJB-Mitgliedsnummer</q>
+      , die im Menü
+      <a href="../userguide/index.xhtml#detail-own_data">Eigene Daten anzeigen/ändern</a>
+      durch den Kampfrichter oder im Menü
+      <a href="../userguide_extended/index.xhtml#detail-usermgmt">Verwaltung KR-Kartei</a>
+      durch die Administratoren eingegeben werden kann.
+      <br />
+      Aus diesem Grund ist es wichtig darauf zu achten, dass der Eintrag in diesem Feld in den betroffenen Systemen
+      identisch ist, da sonst die Zuordnung des Pseudonyms nach der Datenübertragung nicht mehr möglich ist.
+    </p>
+    <p>Die Datenschnittstelle kann sowohl manuell im Administrationsbereich genutzt werden, als auch über ein
+      automatisches Skript, welches auf dem Server automatisch regelmäßig aufgerufen werden kann (sog. cron-Jobs).
+    </p>
+    <h3>
+      <a name="data_interface_manual" />
+      Manuelle Nutzung
+    </h3>
+    <p>
+      Die manuelle Nutzung erfolgt über den Menüpunkt
+      <q>Datenaustausch</q>
+      im Administrationsbereich. Dort finden sich sowohl die Maske für den Import als auch für den Export untereinander
+      aufgeführt.
+    </p>
+    <p>Für den Datenimport muss lediglich die XML-Datei mit den Daten ausgewählt und der Bezirk eingegeben werden unter
+      dem die zu importierenden Veranstaltungen abgelegt werden sollen.
+    </p>
+    <p class="attention">
+      <em>Achtung</em>
+      :
+      <br />
+      Für den Import sollte ein getrennter Bezirk eingerichtet werden, auf den kein Benutzer Zugriff hat, damit sich
+      einerseits kein Kampfrichter manuell anmelden kann und andererseits kein Obmann dort Änderungen oder Einträge
+      macht, die durch die Schnittstelle verworfen werden.
+    </p>
+    <p>
+      Mit Klick auf
+      <code>los!</code>
+      wird der Importvorgang gestartet.
+    </p>
+    <p>Für den Datenexport stehen mehrere Auswahl-/Filtermöglichkeiten zur Verfügung:</p>
+    <ul>
+      <li>
+        <code>Bezirk - Veranstaltung</code>
+        <p>Es werden nur Veranstaltungen und deren Einteilungen aus den jeweils ausgewählten Bezirken übertragen.</p>
+      </li>
+      <li>
+        <code>Bezirk - Kampfrichter</code>
+        <p>In den Einteilungsdaten werden nur die Kampfrichter berücksichtigt, die zu den jeweils ausgewählten Bezirken
+          (inklusive untergeordnete Bezirke) gehören.
+        </p>
+      </li>
+      <li>
+        <code>Lizenz</code>
+        <p>Es werden nur Kampfrichter mit den jeweils ausgewählten Lizenzen berücksichtigt.</p>
+      </li>
+    </ul>
+    <p>
+      Für jedes Kriterium muss mindestens ein Feld ausgewählt worden sein. (Eine Mehrfachauswahl ist möglich - für nicht
+      nebeneinander liegende Zeilen die Taste
+      <kbd>Strg</kbd>
+      bei der Auswahl gedrückt halten!)
+    </p>
+    <p>
+      Nach dem Klick auf
+      <code>los!</code>
+      wird ein Speicherdialog angezeigt, mit dem die generierte XML-Datei heruntergeladen werden kann.
+    </p>
+    <h3>
+      <a name="data_interface_auto" />
+      Automatische Steuerung
+    </h3>
+    <p>
+      Für die automatische Steuerung der Datenschnittstelle muss eine Konfigurationsdatei im XML-Format erstellt
+      und im
+      Ordner
+      <code>interchange</code>
+      (Unterordner von
+      <code>application</code>
+      ) als
+      <code>interchange.config.xml</code>
+      abgelegt werden.
+      <br />
+      Anschließend kann ein sog. cron-Job erstellt werden, der regelmäßig (z.B. einmal am Tag) das Skript
+      <code>automatic_interchange.php</code>
+      (
+      <code>php &lt;Pfad zum Ordner interchange im Betriebssystem&gt;/automatic_interchange.php</code>
+      ) aufruft.
+    </p>
+    <p>
+      Der Aufbau der XML-Datei ist durch das XML-Schema
+      <code>data_interchange.xsd</code>
+      spezifiziert. Eine Beispieldatei (<code>interchange.template.xml</code>) veranschaulicht den Aufbau.
+      <br />
+      Die Datei erlaubt es, mehrere Import- und Exportkonfigurationen zu erstellen, bei denen jeweils die
+      Zugangsdaten zu
+      einem Mailpostfach angegeben werden müssen, damit die erzeugten Dateien abgesendet (Export) oder
+      vom Postfach
+      abgerufen (Import) werden können. Im übrigen sind die gleichen Parameter wie bei der manuellen Nutzung anzugeben.
+    </p>
   </body>
 </html>
