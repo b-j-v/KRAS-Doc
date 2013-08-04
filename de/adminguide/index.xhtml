@@ -1096,13 +1096,18 @@
     <p>
       Der Aufbau der XML-Datei ist durch das XML-Schema
       <code>data_interchange.xsd</code>
-      spezifiziert. Eine Beispieldatei (<code>interchange.template.xml</code>) veranschaulicht den Aufbau.
+      spezifiziert. Eine Beispieldatei (
+      <code>interchange.template.xml</code>
+      ) veranschaulicht den Aufbau.
       <br />
-      Die Datei erlaubt es, mehrere Import- und Exportkonfigurationen zu erstellen, bei denen jeweils die
-      Zugangsdaten zu
-      einem Mailpostfach angegeben werden müssen, damit die erzeugten Dateien abgesendet (Export) oder
-      vom Postfach
-      abgerufen (Import) werden können. Im übrigen sind die gleichen Parameter wie bei der manuellen Nutzung anzugeben.
+      Die Datei erlaubt es, mehrere Import- und Exportkonfigurationen zu erstellen.
+      <br />
+      Die Exporte werden über den gleichen Weg versandt wie die übrigen Mails im System.
+      Für die Importe ist ein entsprechender
+      Posteingangsserver (Protokoll POP3!) in dieser Konfigurationsdatei zu hinterlegen, von dem die zugesandten Dateien abgerufen werden
+      können.
+      <br />
+      Im übrigen sind die gleichen Parameter wie bei der manuellen Nutzung anzugeben.
     </p>
   </body>
 </html>
