@@ -542,7 +542,7 @@
       </li>
       <li>
         <h5>
-          <var>$mailtype</var>
+          <var>$mailCfg['type']</var>
         </h5>
         <p>
           Je nachdem, welche Mailmethode vom Provider zur Verfügung gestellt wird, muss hier die entsprechende
@@ -574,7 +574,7 @@
       </li>
       <li>
         <h5>
-          <var>$smtp_host</var>
+          <var>$mailCfg['smtp']['host']</var>
         </h5>
         <p>
           Hier muss der Hostname des SMTP-Dienstes angegeben werden. (z.B.
@@ -584,7 +584,7 @@
       </li>
       <li>
         <h5>
-          <var>$smtp_auth</var>
+          <var>$mailCfg['smtp']['auth']</var>
         </h5>
         <p>
           Ist der SMTP-Dienst mit einer Authentifizierung versehen, muss hier
@@ -598,13 +598,13 @@
       </li>
       <li>
         <h5>
-          <var>$smtp_user</var>
+          <var>$mailCfg['smtp']['user']</var>
         </h5>
         <p>Hier muss der Username für die Authentifizierung stehen.</p>
       </li>
       <li>
         <h5>
-          <var>$smtp_pwd</var>
+          <var>$mailCfg['smtp']['password']</var>
         </h5>
         <p>Hier muss das Passwort passend zum Usernamen für die Authentifizierung stehen.</p>
       </li>

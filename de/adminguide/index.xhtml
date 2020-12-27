@@ -504,14 +504,14 @@
     <ul>
       <li>
         <h5>
-          <var>$mail_once</var>
+          <var>$mailCfg['mail_once']</var>
         </h5>
         <p>Da manche Anbieter von Webspace bestimmte Funktionalitäten sperren, v.a. im Bereich des eMail-Versands, sind
           in KRAS zwei verschiedene Mailmethoden realisiert.
         </p>
         <p>
           Ist
-          <var>$mail_once</var>
+          <var>$$mailCfg['mail_once']</var>
           auf
           <kbd>false</kbd>
           gesetzt, wird eine eMail an jeden der Empfänger einzeln versandt.
@@ -524,7 +524,7 @@
         </p>
         <p>
           Ist
-          <var>$mail_once</var>
+          <var>$$mailCfg['mail_once']</var>
           auf
           <kbd>true</kbd>
           gesetzt, wird gleichzeitig an alle Empfänger auf einmal geschickt. Die Vor- und Nachteile bei dieser
@@ -542,7 +542,7 @@
       </li>
       <li>
         <h5>
-          <var>$mailtype</var>
+          <var>$mailCfg['type']</var>
         </h5>
         <p>
           Je nachdem, welche Mailmethode vom Provider zur Verfügung gestellt wird, muss hier die entsprechende
@@ -574,7 +574,7 @@
       </li>
       <li>
         <h5>
-          <var>$smtp_host</var>
+          <var>$mailCfg['smtp']['host']</var>
         </h5>
         <p>
           Hier muss der Hostname des SMTP-Dienstes angegeben werden. (z.B.
@@ -584,7 +584,7 @@
       </li>
       <li>
         <h5>
-          <var>$smtp_auth</var>
+          <var>$mailCfg['smtp']['auth']</var>
         </h5>
         <p>
           Ist der SMTP-Dienst mit einer Authentifizierung versehen, muss hier
@@ -598,13 +598,13 @@
       </li>
       <li>
         <h5>
-          <var>$smtp_user</var>
+          <var>$mailCfg['smtp']['user']</var>
         </h5>
         <p>Hier muss der Username für die Authentifizierung stehen.</p>
       </li>
       <li>
         <h5>
-          <var>$smtp_pwd</var>
+          <var>$mailCfg['smtp']['password']</var>
         </h5>
         <p>Hier muss das Passwort passend zum Usernamen für die Authentifizierung stehen.</p>
       </li>
